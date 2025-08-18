@@ -1,29 +1,29 @@
-# Cpp_DSA
-
 # Quit Safari if running
 killall Safari 2>/dev/null
 
-# Remove Safari preferences
-rm -f ~/Library/Preferences/com.apple.Safari.plist
-rm -f ~/Library/Preferences/com.apple.Safari.Extensions.plist
+echo "🧹 Cleaning Safari data..."
 
-# Remove Safari caches
-rm -rf ~/Library/Caches/com.apple.Safari
-rm -rf ~/Library/Caches/Metadata/Safari
+# Preferences
+sudo rm -f ~/Library/Preferences/com.apple.Safari.plist
+sudo rm -f ~/Library/Preferences/com.apple.Safari.Extensions.plist
 
-# Remove Safari saved states
-rm -rf ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
-rm -rf ~/Library/Autosave\ Information
+# Safari cache
+sudo rm -rf ~/Library/Caches/com.apple.Safari
+sudo rm -rf ~/Library/Caches/Metadata/Safari
 
-# Remove Safari data (bookmarks, history, tabs, etc.)
-rm -rf ~/Library/Safari
+# Saved states
+sudo rm -rf ~/Library/Saved\ Application\ State/com.apple.Safari.savedState
+sudo rm -rf ~/Library/Autosave\ Information
 
-# Remove Safari cookies
-rm -f ~/Library/Cookies/com.apple.Safari.SafeBrowsing.binarycookies
+# Main Safari data (bookmarks, history, tabs, etc.)
+sudo rm -rf ~/Library/Safari
 
-# Remove Website Data storage
-rm -rf ~/Library/Containers/com.apple.Safari
-rm -rf ~/Library/Containers/com.apple.SafariTechnologyPreview
-rm -rf ~/Library/Group\ Containers/com.apple.Safari
+# Cookies
+sudo rm -f ~/Library/Cookies/com.apple.Safari.SafeBrowsing.binarycookies
 
-echo "✅ Safari has been reset to default settings. Reopen Safari now."
+# Website Data / Containers
+sudo rm -rf ~/Library/Containers/com.apple.Safari
+sudo rm -rf ~/Library/Containers/com.apple.SafariTechnologyPreview
+sudo rm -rf ~/Library/Group\ Containers/com.apple.Safari
+
+echo "✅ Safari has been fully reset. Reopen Safari to start fresh."
