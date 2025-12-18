@@ -30,7 +30,7 @@ class MyList:
 
 
     def insert(self,pos,item):
-        if self.n==self.size
+        if self.n==self.size:
             self.__resize(self.size*2)
 
         for i in range(self.n,pos,-1):
